@@ -1,0 +1,31 @@
+.searchForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchForm input {
+    width: 75%;
+    height: 60px;
+    margin: 40px;
+    padding: 10px;
+    font-size: 20pt;
+    border: 1px solid black;
+}
+
+.searchForm button {
+    width: 10%;
+    height: 60px;
+    border: none;
+    font-size: 16pt;
+    background-color: black;
+    color: white;
+}
+
+.movie-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
