@@ -1,0 +1,34 @@
+.nav {
+  background-color: hsl(209, 23%, 22%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.nav h1 {
+  font-size: 20pt;
+}
+
+.nav ul {
+  /* background-color: royalblue; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+
+.nav ul li {
+  list-style: none;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 14pt;
+}

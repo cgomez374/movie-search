@@ -1,12 +1,9 @@
-import React from 'react'
-import './NavStyle.css'
-
-import Search from '../Search/Search'
-
+import React from 'react';
+import './NavStyle.css';
 function Navigation(){
     return(
         <nav className="nav">
-            <h1>Movie Search</h1>
+            <h1>Movies</h1>
             <ul>
                 <li><a href='#'>Home</a></li>
                 <li><a href='#'>Search</a></li>

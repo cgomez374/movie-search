@@ -1,0 +1,10 @@
+.showcase {
+    /* background-color: red; */
+    width: 100%;
+    min-height: 40vh;
+}
+
+.showcase h1 {
+    text-align: center;
+    padding: 15vh;
+}
