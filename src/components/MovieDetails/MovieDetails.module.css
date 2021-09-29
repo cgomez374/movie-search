@@ -1,0 +1,89 @@
+.detailsPage {
+    width: 100%;
+    min-height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.backButton {
+    background-color: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+    width: 12%;
+    min-height: 5vh;
+    margin: 2vh 10vh;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    outline: none;
+}
+
+.details {
+    width: 75%;
+    min-height: 55vh;
+    margin: 3rem auto;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.details img {
+    width: 25%;
+    min-height: auto;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.text {
+    width: 50%;
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-size: 1rem;
+}
+@media (max-width: 1300px) {
+    .details {
+        width: 90%;
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+    .details {
+        flex-direction: column;
+    }
+
+    .details img{
+        width: 50%;
+    }
+
+    .text {
+        width: 90%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 850px) {
+    .backButton{
+        width: 50%;
+        min-height: 3rem;
+        margin: 3vh 13vh;
+        font-size: 1.2rem;
+    }
+
+    .details {
+        width: 100%;
+    }
+    .details img{
+        width: 70%;
+    }
+    .text {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}

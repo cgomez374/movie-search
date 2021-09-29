@@ -1,0 +1,25 @@
+.moviesList {
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.moviesList a {
+    width: 80%;
+    min-height: 20vh;
+}
+
+.moviesList img {
+    width: 100%;
+    min-height: auto;
+    margin: 0.5rem 1rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+@media (max-width: 850px) {
+    .moviesList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,20 +1,32 @@
 import './App.css';
-// import SearchResults from './components/Results/SearchResults';
-// import AlertMsg from './components/Alert/AlertMsg'
-// import Search from './components/Search/Search'
+import Navigation from './components/Navigation/Navigation';
+import Search from './components/Search/Search'
 import Showcase from './components/Showcase/Showcase';
 import PopularMovies from './components/PopularMovies/PopularMovies';
+import MovieDetails from './components/MovieDetails/MovieDetails';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
  
 
   return (
-    <main>
-      <Showcase />
-      <PopularMovies />
-      {/* <Search /> */}
-      
-    </main>
+    <Router>
+      <main>
+        <Navigation />
+        <Switch>
+          <Route exact path='/' >
+            <Showcase />
+            <PopularMovies />
+          </Route>
+          <Route path='/search'>
+            <Search />
+          </Route>
+          <Route path='/:id'>
+            <MovieDetails />
+          </Route>
+        </Switch>
+      </main>
+    </Router>
   );
 }
 

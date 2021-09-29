@@ -8,9 +8,24 @@
 
 body {
     min-height: 100%;
-    /* background-color: hsl(0, 0%, 98%); */
     background-color: hsl(207, 26%, 17%);
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nunito Sans', 'sans-serif';
     text-transform: capitalize;
     color: hsl(0, 0%, 100%);
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+button {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+input {
+  font-family: 'Nunito Sans', sans-serif; 
 }

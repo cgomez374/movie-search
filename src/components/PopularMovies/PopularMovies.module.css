@@ -9,18 +9,7 @@
 }
 
 .moviesList {
-    /* background-color: royalblue; */
     width: 95%;
     min-height: 40rem;
     margin: 0 auto;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-}
-
-.moviesList img {
-    width: 80%;
-    min-height: 20vh;
-    margin: 0.5rem auto;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }

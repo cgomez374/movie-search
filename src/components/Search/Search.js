@@ -1,27 +1,13 @@
 import React, {useState} from 'react'
-import './Search.css';
-
-import SearchResults from '../Results/SearchResults';
-import AlertMsg from '../Alert/AlertMsg';
+import Styles from './Search.module.css';
+import {getMovies} from '../../contexts/api/getMovies';
+import MovieList from '../MovieList.js/MovieList';
 
 function Search() {
     //create state to save movies data and setdata
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState('');
-    const [msg, setMsg] = useState('');
-
-    //function that will make api call
-    const getMovies = async (query) => {
-        const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=2981946d7a75ea943692c98fb27ce426&language=en-US&query=${query}`);
-        var data = await response.json();
-        if(data !== null){
-            setMovies(data.results);
-            setMsg('');
-        }
-        else{
-         setMsg('Error! Try Again!');
-        }
-    }
+    const [msg, setMsg] = useState(false);
 
     const updateSearch = (e) => {
         setSearch(e.target.value);
@@ -35,7 +21,7 @@ function Search() {
 
         if(search !== ''){
             setMsg('Loading..');
-            getMovies(search);
+            getMovies(search, setMovies, setMsg);
             setSearch('');
         }
         else{
@@ -43,8 +29,8 @@ function Search() {
         }
     }
     return(
-        <div className="App">
-        <form onSubmit={getResults} className='searchForm'>
+      <div className={Styles.searchPage}>
+        <form onSubmit={getResults} className={Styles.searchForm}>
           <input 
             type="text"
             placeholder='Search Movies'
@@ -53,20 +39,8 @@ function Search() {
           />
           <button>Submit</button>
         </form>
-        <section className='movie-display'>
-          {/* {will display data on seperate component} */}
-          {msg !== '' && <AlertMsg msg={msg}/>}
-          {movies.length > 0 && movies.map((movie) => {
-            const {id, title, overview, poster_path} = movie;
-            return(
-              <SearchResults 
-                key={id}
-                title={title}
-                overview={overview}
-                poster={poster_path}
-              />
-            )
-          })}
+        <section className={Styles.movieDisplay}>
+          <MovieList movies={movies} error={msg} />
         </section>
       </div>
     )

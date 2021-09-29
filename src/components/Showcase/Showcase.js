@@ -6,7 +6,6 @@ import Navigation from '../Navigation/Navigation';
 const Showcase = () => {
     return (
         <header className={Styles.showcase}>
-            <Navigation />
             <h1>welcome to the movies</h1>
         </header>
     )

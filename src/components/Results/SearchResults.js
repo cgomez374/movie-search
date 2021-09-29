@@ -15,10 +15,6 @@ function SearchResults({title, overview, poster}) {
             <div className="img-container">
                 <img src={poster} alt="poster"/>
             </div>
-            <div className="movie-info">
-                <h2>{title}</h2>
-                <p>{overview}</p>
-            </div>
         </section>
     )
 }
